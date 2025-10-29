@@ -1,0 +1,141 @@
+/* 
+---------- Units ----------
+Base color = 
+*/
+
+
+
+/* || css reset */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    display: block;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: hsl(208, 100%, 97%);
+    font-size: 1.5rem;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+
+/* || header section */
+.header{
+    align-items: center;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.nav{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 99.9%;
+}
+
+.nav__links{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.header a:any-link{
+    align-items: center;
+    border-radius: 3px;
+    color: hsl(0, 0%, 100%);
+    display: block;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0.8rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.header a:hover, .header a:focus-visible{
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+    outline: none;
+}
+
+.header .logo a{
+    color: hsl(271, 76%, 53%);
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.header .logo a:hover, .header .logo a:focus{
+    background-color: black;
+    color: hsl(271, 76%, 53%);
+    outline: none;
+}
+
+/* || nav services */
+.nav__services{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.nav__services-{
+    align-items: center;
+    display: flex;
+}
+
+.nav__services- a:first-child:hover, 
+.nav__services- a:first-child:focus-visible{
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    cursor: default;
+}
+
+.white-icon{
+    filter: brightness(1000%);
+    transition: transform 0.3s;
+}
+
+.nav__services__sub{
+    border: 1.5px solid hsl(271, 76%, 53%);
+    list-style: none;
+    position: absolute;
+    top: 32px;
+    padding: 0.2rem;
+    left: 0;
+    background-color: hsl(0, 0%, 100%);
+    white-space: nowrap;
+    justify-content: flex-start;
+    display: none;
+}
+
+.nav__services__sub a:any-link{
+    color: hsl(0, 0%, 0%);
+    display: block;
+}
+
+.nav__services__sub a:hover,
+.nav__services__sub a:focus-visible{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(271, 76%, 53%);
+}
+
+:is(.nav__services:hover, .nav__services:focus-within) .white-icon{
+    transform: rotate(90deg);
+}
+
+:is(.nav__services:hover, .nav__services:focus-within) .nav__services__sub{
+    display: block;
+}
